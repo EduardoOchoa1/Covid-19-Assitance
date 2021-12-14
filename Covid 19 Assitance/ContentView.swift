@@ -10,6 +10,22 @@ import MapKit
 
 struct ContentView: View {
     @State var input: String = ""
+    
+    struct AnnotatedItem: Identifiable {
+        let id = UUID()
+        var name: String
+        var coordinate: CLLocationCoordinate2D
+    }
+    
+    @State private var region: MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 41.84553285, longitude: -87.72347359), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+    
+    private var pointsOfInterest = [
+               AnnotatedItem(name: "Walgreens", coordinate: .init(latitude: 41.84404815, longitude: -87.72490806)),
+               AnnotatedItem(name: "Jorge Prieto Health Center", coordinate: .init(latitude: 41.84714515, longitude: -87.72498431)),
+               AnnotatedItem(name: "Lawndale Christian Health Center", coordinate: .init(latitude: 41.8525733, longitude: -87.72179109))
+               ]
+
+    
     var body: some View {
         VStack {
             
@@ -18,28 +34,15 @@ struct ContentView: View {
                 Button(action:{}, label: {})
             }
             .padding()
-            MapView()
+            Map(coordinateRegion: $region, annotationItems: pointsOfInterest) {
+                item in MapMarker(coordinate: item.coordinate)
+            }
+            .edgesIgnoringSafeArea(.all)
         }
     }
 }
 
-struct MapView: UIViewRepresentable {
-    func updateUIView(_ uiView: MKMapView, context: Context) {
-        
-    }
-    
-    func makeUIView(context: Context) -> MKMapView{
-        let map = MKMapView()
-        map.mapType = .standard
-        map.isRotateEnabled = false
-        
-        let location = CLLocation(latitude: 41.8781, longitude: -87.6298)
-        let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
-        map.setRegion(region, animated: false)
-        return map
-    }
 
-}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
