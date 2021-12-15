@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06B61264276A9062003BA3EA /* Info Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B61263276A9062003BA3EA /* Info Screen.swift */; };
 		F5A6A04F2760167F00EFF191 /* Covid_19_AssitanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A6A04E2760167F00EFF191 /* Covid_19_AssitanceApp.swift */; };
 		F5A6A0512760167F00EFF191 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A6A0502760167F00EFF191 /* ContentView.swift */; };
 		F5A6A0532760168200EFF191 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5A6A0522760168200EFF191 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06B61263276A9062003BA3EA /* Info Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Info Screen.swift"; sourceTree = "<group>"; };
 		F5A6A04B2760167F00EFF191 /* Covid 19 Assitance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid 19 Assitance.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A6A04E2760167F00EFF191 /* Covid_19_AssitanceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid_19_AssitanceApp.swift; sourceTree = "<group>"; };
 		F5A6A0502760167F00EFF191 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			children = (
 				F5A6A04E2760167F00EFF191 /* Covid_19_AssitanceApp.swift */,
 				F5A6A0502760167F00EFF191 /* ContentView.swift */,
+				06B61263276A9062003BA3EA /* Info Screen.swift */,
 				F5A6A0522760168200EFF191 /* Assets.xcassets */,
 				F5A6A0572760168200EFF191 /* Info.plist */,
 				F5A6A0542760168200EFF191 /* Preview Content */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5A6A0512760167F00EFF191 /* ContentView.swift in Sources */,
+				06B61264276A9062003BA3EA /* Info Screen.swift in Sources */,
 				F5A6A04F2760167F00EFF191 /* Covid_19_AssitanceApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
