@@ -17,12 +17,15 @@ struct ContentView: View {
         var coordinate: CLLocationCoordinate2D
     }
     
-    @State private var region: MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 41.84553285, longitude: -87.72347359), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+    @State private var region: MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 41.84553285, longitude: -87.72347359), span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.01))
     
     private var pointsOfInterest = [
                AnnotatedItem(name: "Walgreens", coordinate: .init(latitude: 41.84404815, longitude: -87.72490806)),
                AnnotatedItem(name: "Jorge Prieto Health Center", coordinate: .init(latitude: 41.84714515, longitude: -87.72498431)),
-               AnnotatedItem(name: "Lawndale Christian Health Center", coordinate: .init(latitude: 41.8525733, longitude: -87.72179109))
+                AnnotatedItem(name: "Lawndale Christian Health Center", coordinate: .init(latitude: 41.8525733, longitude: -87.72179109)),
+                AnnotatedItem(name: "Atlantic Mall", coordinate: .init(latitude: 41.844480, longitude: -87.723830)),
+                AnnotatedItem(name: "Drive Thru Testing Ogden Ave", coordinate: .init(latitude: 41.851370, longitude: -87.723830)),
+                AnnotatedItem(name: "Howard Brown Health and Project Vida", coordinate: .init(latitude: 41.842550, longitude: -87.728680))
                ]
 
     
